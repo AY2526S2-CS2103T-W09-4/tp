@@ -47,3 +47,11 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 * Role: Developer
 * Responsibilities: Dev Ops + Threading
 
+### Xu Jiaqi
+
+<img src="images/jiaqixu1.png" width="200px">
+
+[[github](http://github.com/jiaqixu1)]
+
+* Role: Developer
+* Responsibilities: Documentation, Code Quality
