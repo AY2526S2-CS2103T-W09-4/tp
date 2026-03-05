@@ -336,16 +336,16 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 **Extensions**
 
 * 1a. TaskForge detects invalid command input.
-	   * 1a1. TaskForge displays an error message.
-	   * 1a2. User enters the command again.
-      * Steps 1a1-1a2 are repeated until the input entered are valid.
+	 * 1a1. TaskForge displays an error message.
+	 * 1a2. User enters the command again.
+    * Steps 1a1-1a2 are repeated until the input entered are valid.
    
    Use case resumes from step 2.
 
 * 2a. TaskForge could not find the mentioned contact.
-	   * 2a1. TaskForge displays an error message.
-	   * 2a2. User enters the command again.
-	   * Steps 2a1-2a2 are repeated until the input entered are valid.
+	 * 2a1. TaskForge displays an error message.
+	 * 2a2. User enters the command again.
+	 * Steps 2a1-2a2 are repeated until the input entered are valid.
    
    Use case resumes from step 2.
 
@@ -368,16 +368,16 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 **Extensions**
 
 * 1a. Contact does not exist.
-	   * 1a1. TaskForge shows an error message.
-	   * 1a2. User enters new input.
-      * Steps 1a1-1a2 are repeated until the input entered are valid.
+	 * 1a1. TaskForge shows an error message.
+	 * 1a2. User enters new input.
+    * Steps 1a1-1a2 are repeated until the input entered are valid.
    
    Use case ends.
 
 * 2a. Task does not exist.
-	   * 2a1. TaskForge shows an error message.
-	   * 2a2. User enters new input.
-	   * Steps 2a1-2a2 are repeated until the input entered are valid.
+	 * 2a1. TaskForge shows an error message.
+	 * 2a2. User enters new input.
+	 * Steps 2a1-2a2 are repeated until the input entered are valid.
    
    Use case ends.
 
@@ -393,9 +393,9 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 **Extensions**
 
 * 1a. TaskForge detects error in CLI command.
-	   * 1a1. TaskForge returns the error message.
-	   * 1a2. User input another command.
-      * Steps 1a1 - 1a2 are repeated until the command is correct.
+	 * 1a1. TaskForge returns the error message.
+	 * 1a2. User input another command.
+    * Steps 1a1 - 1a2 are repeated until the command is correct.
    
    Use case ends.
 
