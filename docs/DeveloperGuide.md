@@ -369,8 +369,24 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Glossary
 
-* **Mainstream OS**: Windows, Linux, Unix, MacOS
-* **Private contact detail**: A contact detail that is not meant to be shared with others
+* **Contact**: A person who is involved in a project and can be assigned tasks
+* **Task**: A unit of project that needs to be completed by a contact
+* **Project**: A collection of tasks and contacts organized to achieve a specific goal
+* **GUI**: Graphical user interface of the application
+* **Mainstream OS**: Mainstream OS stands for Mainstream Operating System which include MacOS, Linux and Windows
+* **PR**: Pull request in Github
+* **CLI**: A command line interface (CLI) is a text-based interface where you can input commands that interact with a computer's operating system.
+* **User**: Project managers and team leaders who preferred CLI
+* **JAR**: Java ARchive, a file format to run java program
+* **ZIP**: a file format to compress one or more files into 1 single file
+* **CI**: Continuous Integration which is a software development practice in which code changes are frequently integrated into a shared repository and automatically built and tested to detect issues early
+* **Page deployment**: The product website page that is being deployed on Github
+* **Unit test**: A testing method to test units of code
+* **Integration test**: A software testing phase where individual units or modules are combined and tested as a group to verify they function correctly together
+* **Command**: A text instruction entered by the user in the CLI to perform a specific operation in the system
+* **Command parameters**: Parameters that are part of a command to specify information
+* **Remote servers**: A computer located elsewhere that stores data, hosts applications, or processes tasks, accessible over a network or the Internet
+* **Breadth-first Incremental manner**: A development strategy where small portions of functionality are added across the whole system step by step, instead of completing one feature fully before starting another
 
 --------------------------------------------------------------------------------------------------------------------
 
