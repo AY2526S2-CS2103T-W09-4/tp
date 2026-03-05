@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Task Forge
+title: TaskForge
 ---
 
 [![Java CI](https://github.com/AY2526S2-CS2103T-W09-4/tp/actions/workflows/gradle.yml/badge.svg)](https://github.com/AY2526S2-CS2103T-W09-4/tp/actions/workflows/gradle.yml)
