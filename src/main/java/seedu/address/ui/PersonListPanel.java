@@ -9,6 +9,8 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.Region;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.model.person.Person;
+import seedu.address.ui.PersonListPanel.PersonListViewCell;
+import javafx.scene.control.Label;
 
 /**
  * Panel containing the list of persons.
@@ -19,6 +21,9 @@ public class PersonListPanel extends UiPart<Region> {
 
     @FXML
     private ListView<Person> personListView;
+
+    @FXML
+    private Label remark;
 
     /**
      * Creates a {@code PersonListPanel} with the given {@code ObservableList}.
