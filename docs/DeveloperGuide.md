@@ -148,11 +148,11 @@ Classes used by multiple components are in the `seedu.taskforge.commons` package
 
 This section describes some noteworthy details on how certain features are implemented.
 
-### Undo/redo feature
+### \[Proposed\] Undo/redo feature
 
-#### Implementation
+#### Proposed Implementation
 
-The undo/redo mechanism is facilitated by `VersionedAddressBook`. It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`. Additionally, it implements the following operations:
+The proposed undo/redo mechanism is facilitated by `VersionedAddressBook`. It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`. Additionally, it implements the following operations:
 
 * `VersionedAddressBook#commit()` — Saves the current address book state in its history.
 * `VersionedAddressBook#undo()` — Restores the previous address book state from its history.
@@ -205,7 +205,7 @@ The `redo` command does the opposite — it calls `Model#redoAddressBook()`,
 
 </div>
 
-Step 5. The user then decides to execute the command `list`. Commands that do not modify the address book, such as `list`, will not call `Model#commitAddressBook()`, `Model#undoAddressBook()` or `Model#redoAddressBook()`. Thus, the `addressBookStateList` remains unchanged.
+Step 5. The user then decides to execute the command `list`. Commands that do not modify the address book, such as `list`, will usually not call `Model#commitAddressBook()`, `Model#undoAddressBook()` or `Model#redoAddressBook()`. Thus, the `addressBookStateList` remains unchanged.
 
 ![UndoRedoState4](images/UndoRedoState4.png)
 
@@ -517,23 +517,23 @@ _{Explain here how the data archiving feature will be implemented}_
 Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unlikely to have) - `*`
 
 | Priority | As a …​ | I want to …​                           | So that I can…​                                                              |
-|---------|------|----------------------------------------|------------------------------------------------------------------------------|
-| `* * *` | user | add a contact                          | keep track of project members.                                               |
-| `* * *` | user | delete a contact                       | remove outdated information or remove a member from the project.             |
-| `* * *` | user | add a project                          | keep track of projects.                                                      |
-| `* * *` | user | remove a project                       | remove completed or discarded project.                                       |
-| `* * *` | user | assign a project to a contact          | assign member to the project                                                 |
-| `* * *` | user | unassign a project from a contact      | remove members from a project                                                |
-| `* * *` | user | add tasks to contact                   | clearly know about their responsibilities                                    |
-| `* * *` | user | delete tasks from a contact            | easily remove tasks that is falsely assigned to the contact or has been done |
-| `* * *` | user | view all contacts                      | see all the project members contacts                                         |
-| `* * *` | user | view all projects                      | easily have an overview of all projects                                      |
-| `* * *` | user | view all tasks assigned to the contact | see all the tasks assigned to a contact                                      |
-| `* * *` | user | find projects by name                  | quickly locate relevant projects from the global project list                |
-| `* * *` | user | find contacts by any parameters        | quickly find someone                                                         |
-| `*`     | user | view team member's availability        | who is free to take on work                                                  |
-| `* * `  | user | undo the last action                   | recover from mistakes                                                       |
-| `* * `  | user | redo the last action                   | restore changes if I undo by mistake                                     |
+|----------|------|----------------------------------------|------------------------------------------------------------------------------|
+| `* * *`  | user | add a contact                          | keep track of project members.                                               |
+| `* * *`  | user | delete a contact                       | remove outdated information or remove a member from the project.             |
+| `* * *`  | user | add a project                          | keep track of projects.                                                      |
+| `* * *`  | user | remove a project                       | remove completed or discarded project.                                       |
+| `* * *`  | user | assign a project to a contact          | assign member to the project                                                 |
+| `* * *`  | user | unassign a project from a contact      | remove members from a project                                                |
+| `* * *`  | user | add tasks to contact                   | clearly know about their responsibilities                                    |
+| `* * *`  | user | delete tasks from a contact            | easily remove tasks that is falsely assigned to the contact or has been done |
+| `* * *`  | user | view all contacts                      | see all the project members contacts                                         |
+| `* * *`  | user | view all projects                      | easily have an overview of all projects                                      |
+| `* * *`  | user | view all tasks assigned to the contact | see all the tasks assigned to a contact                                      |
+| `* * *`  | user | find projects by name                  | quickly locate relevant projects from the global project list                |
+| `* * *`  | user | find contacts by any parameters        | quickly find someone                                                         |
+| `*`      | user | view team member's availability        | who is free to take on work                                                  |
+
+
 
 *{More to be added}*
 
@@ -705,29 +705,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
       Use case ends.
 
-**Use case: UC07 - Undo previous command**
-
-**Actor**: User
-
-**Guarantees**
-
-1. The previous change made to the address book is reverted.
-
-**MSS**
-
-1. User requests to undo previous command.
-2. TaskForge checks if there is a previous state available.
-3. TaskForge shifts the current state into the previous state.
-4. TaskForge confirms to the user that the last action has been undone and displays the previous state.
-
-    Use case ends.
-
-**Extensions**
-
-* 2a. No previous state available.
-    * 2a1. TaskForge displays error message.
-
-    Use case ends.
 
 *{More to be added}*
 

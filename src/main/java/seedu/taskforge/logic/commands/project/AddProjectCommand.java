@@ -43,7 +43,6 @@ public class AddProjectCommand extends ProjectCommand {
         }
 
         model.addProject(toAdd);
-        model.commitAddressBook(String.format("%s %s", COMMAND_WORD, SUBCOMMAND_WORD));
         return new CommandResult(String.format(MESSAGE_SUCCESS, Messages.format(toAdd)));
     }
 

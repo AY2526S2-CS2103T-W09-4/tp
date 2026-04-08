@@ -163,31 +163,6 @@ public class AddCommandTest {
         }
 
         @Override
-        public void commitAddressBook(String input) {
-
-        }
-
-        @Override
-        public String undoAddressBook() {
-            return "";
-        }
-
-        @Override
-        public String redoAddressBook() {
-            return "";
-        }
-
-        @Override
-        public boolean canUndoAddressBook() {
-            return false;
-        }
-
-        @Override
-        public boolean canRedoAddressBook() {
-            return false;
-        }
-
-        @Override
         public boolean hasProject(Project project) {
             throw new AssertionError("This method should not be called.");
         }

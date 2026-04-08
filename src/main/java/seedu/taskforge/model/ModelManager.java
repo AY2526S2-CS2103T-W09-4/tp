@@ -20,7 +20,7 @@ import seedu.taskforge.model.project.Project;
 public class ModelManager implements Model {
     private static final Logger logger = LogsCenter.getLogger(ModelManager.class);
 
-    private final VersionedAddressBook addressBook;
+    private final AddressBook addressBook;
     private final UserPrefs userPrefs;
     private final FilteredList<Person> filteredPersons;
 
@@ -32,7 +32,7 @@ public class ModelManager implements Model {
 
         logger.fine("Initializing with address book: " + addressBook + " and user prefs " + userPrefs);
 
-        this.addressBook = new VersionedAddressBook(addressBook);
+        this.addressBook = new AddressBook(addressBook);
         this.userPrefs = new UserPrefs(userPrefs);
         filteredPersons = new FilteredList<>(this.addressBook.getPersonList());
     }
@@ -156,31 +156,6 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public void commitAddressBook(String input) {
-        addressBook.commit(input);
-    }
-
-    @Override
-    public String undoAddressBook() {
-        return addressBook.undo();
-    }
-
-    @Override
-    public String redoAddressBook() {
-        return addressBook.redo();
-    }
-
-    @Override
-    public boolean canUndoAddressBook() {
-        return addressBook.canUndo();
-    }
-
-    @Override
-    public boolean canRedoAddressBook() {
-        return addressBook.canRedo();
-    }
-
-    @Override
     public boolean equals(Object other) {
         if (other == this) {
             return true;
@@ -196,7 +171,5 @@ public class ModelManager implements Model {
                 && userPrefs.equals(otherModelManager.userPrefs)
                 && filteredPersons.equals(otherModelManager.filteredPersons);
     }
-
-
 
 }

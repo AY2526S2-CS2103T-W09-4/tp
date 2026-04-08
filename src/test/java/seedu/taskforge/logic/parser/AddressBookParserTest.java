@@ -18,8 +18,6 @@ import org.junit.jupiter.api.Test;
 import seedu.taskforge.commons.core.index.Index;
 import seedu.taskforge.logic.commands.ExitCommand;
 import seedu.taskforge.logic.commands.HelpCommand;
-import seedu.taskforge.logic.commands.RedoCommand;
-import seedu.taskforge.logic.commands.UndoCommand;
 import seedu.taskforge.logic.commands.person.AddCommand;
 import seedu.taskforge.logic.commands.person.ClearCommand;
 import seedu.taskforge.logic.commands.person.DeleteCommand;
@@ -121,18 +119,6 @@ public class AddressBookParserTest {
     public void parseCommand_list() throws Exception {
         assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);
         assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + " 3") instanceof ListCommand);
-    }
-
-    @Test
-    public void parseCommand_undo() throws Exception {
-        assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);
-        assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD + " 3") instanceof UndoCommand);
-    }
-
-    @Test
-    public void parseCommand_redo() throws Exception {
-        assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD) instanceof RedoCommand);
-        assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD + " 3") instanceof RedoCommand);
     }
 
     @Test

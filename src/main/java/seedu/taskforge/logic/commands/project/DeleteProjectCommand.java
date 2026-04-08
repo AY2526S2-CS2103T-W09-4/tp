@@ -43,7 +43,6 @@ public class DeleteProjectCommand extends ProjectCommand {
 
         Project projectToDelete = lastShownList.get(targetIndex.getZeroBased());
         model.deleteProject(projectToDelete);
-        model.commitAddressBook(String.format("%s %s", COMMAND_WORD, SUBCOMMAND_WORD));
         return new CommandResult(String.format(MESSAGE_DELETE_PROJECT_SUCCESS, projectToDelete));
     }
 

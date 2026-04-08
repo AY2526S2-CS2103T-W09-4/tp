@@ -115,29 +115,4 @@ public interface Model {
      * @throws NullPointerException if {@code predicate} is null.
      */
     void updateFilteredPersonList(Predicate<Person> predicate);
-
-    /**
-     * Commits the current address book state to the undo/redo history.
-     */
-    void commitAddressBook(String input);
-
-    /**
-     * Restores the previous address book state.
-     */
-    String undoAddressBook();
-
-    /**
-     * Restores a previously undone address book state.
-     */
-    String redoAddressBook();
-
-    /**
-     * Checks if an undo operation is possible.
-     */
-    boolean canUndoAddressBook();
-
-    /**
-     * Checks if a redo operation is possible.
-     */
-    boolean canRedoAddressBook();
 }
